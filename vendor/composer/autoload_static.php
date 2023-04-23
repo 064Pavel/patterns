@@ -10,6 +10,7 @@ class ComposerStaticInit62de3c581453d2d7faf249e82180c4db
         'A' => 
         array (
             'App\\Singleton\\' => 14,
+            'App\\Factory\\' => 12,
         ),
     );
 
@@ -17,6 +18,10 @@ class ComposerStaticInit62de3c581453d2d7faf249e82180c4db
         'App\\Singleton\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/singleton',
+        ),
+        'App\\Factory\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/factory',
         ),
     );
 

@@ -2,7 +2,9 @@
 
     require_once __DIR__.'/../../vendor/autoload.php';
 
-    $database = new App\Singleton\DatabaseConnection();
+    use App\Singleton\DatabaseConnection;
+
+    $database = new DatabaseConnection();
     $database::setName('users')
                ->setHost('localhost2')
                ->setPort(3968)
@@ -10,10 +12,12 @@
                ->setPassword('12345678'); 
 
     //Проверка: 
-    $database2 = new App\Singleton\DatabaseConnection();
+    $database2 = new DatabaseConnection();
     echo $database2::getUserName(); 
 
     /*
+        Тип паттерна: Порождающие
+
         Суть паттерна Singleton заключается в том, чтобы гарантировать,
         что в системе существует только один экземпляр определенного класса
         и предоставить глобальную точку доступа к этому экземпляру.
