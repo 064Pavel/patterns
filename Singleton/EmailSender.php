@@ -24,7 +24,7 @@ class EmailSender
     {
     }
 
-    public function __wakeup(): void
+    public function __wakeup(): never
     {
         throw new Exception('Cannot deserialize');
     }
